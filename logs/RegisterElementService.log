@@ -1,0 +1,318 @@
+[2009feb11 18:10:41,225][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: RegistrarEstado - VERSION: 1.0]
+[2009feb11 18:10:41,239][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicios de Integracion - Register Element Service - Inserciones de elementos en una BD]
+[2009feb11 18:10:41,242][INFO ][1234392041241][doPost RESServlet.java:64][XML Recibido: <?xml version="1.0" encoding="UTF-8"?>
+<Request
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+	<traceId>123456</traceId>
+	<login>login</login>
+	<channel>channel</channel>
+	<SRE001Request>
+    	<proceso>preactivacion</proceso>
+    	<sistema>rtbs</sistema>
+    	<ID>123456</ID>
+    	<FECHA>20080115</FECHA>
+    	<NOMARCHIVO>RegistrosElementos</NOMARCHIVO>
+    	<GSM>584120108437</GSM>
+    	<IMSI>123456789123456</IMSI>
+    	<ICCID>000000000</ICCID>
+    	<PIN>0000</PIN>
+    	<PIN1>0000</PIN1>
+    	<PUK>00000000</PUK>
+    	<PUK2>0000000</PUK2>
+    	<ERROR>OM01</ERROR> 
+    	<ERROR_MSG>Mensaje de Error</ERROR_MSG> 
+  	</SRE001Request>
+</Request>]
+[2009feb11 18:10:41,258][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:50][Iniciando proceso de compilacion de comando: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>${CODE}</code>
+      <message>${MESSAGE}</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:41,259][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:83][Componente CONSTANTE encontrado: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>]
+[2009feb11 18:10:41,264][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:63][Componente VARIABLE encontrado: CODE]
+[2009feb11 18:10:41,265][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:74][Componente CONSTANTE encontrado: </code>
+      <message>]
+[2009feb11 18:10:41,266][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:63][Componente VARIABLE encontrado: MESSAGE]
+[2009feb11 18:10:41,267][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:74][Componente CONSTANTE encontrado: </message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:41,268][DEBUG][1234392041241][processRequest FCController.java:62][<?xml version="1.0" encoding="UTF-8"?>
+<Request
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+	<traceId>123456</traceId>
+	<login>login</login>
+	<channel>channel</channel>
+	<SRE001Request>
+    	<proceso>preactivacion</proceso>
+    	<sistema>rtbs</sistema>
+    	<ID>123456</ID>
+    	<FECHA>20080115</FECHA>
+    	<NOMARCHIVO>RegistrosElementos</NOMARCHIVO>
+    	<GSM>584120108437</GSM>
+    	<IMSI>123456789123456</IMSI>
+    	<ICCID>000000000</ICCID>
+    	<PIN>0000</PIN>
+    	<PIN1>0000</PIN1>
+    	<PUK>00000000</PUK>
+    	<PUK2>0000000</PUK2>
+    	<ERROR>OM01</ERROR> 
+    	<ERROR_MSG>Mensaje de Error</ERROR_MSG> 
+  	</SRE001Request>
+</Request>]
+[2009feb11 18:10:41,271][DEBUG][1234392041241][buildRequest FCHelper.java:39][INICIO de parser XML de entrada]
+[2009feb11 18:10:41,880][DEBUG][1234392041241][execute SolicitudQueueSubmiter.java:120][Nuevo request: ve.com.digitel.premasivas.model.Request{ | header: {traceid=1234392041241} | context: {IMSI=123456789123456, PIN=0000, sistema=rtbs, FECHA=20080115, PUK=00000000, PUK2=0000000, proceso=preactivacion, GSM=584120108437, PIN1=0000, ERROR=OM01, ICCID=000000000, NOMARCHIVO=RegistrosElementos, ERROR_MSG=Mensaje de Error, ID=123456}}]
+[2009feb11 18:10:41,907][INFO ][1234392041241][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=1234392041241} | context: {PIN=0000, IMSI=123456789123456, FECHA=20080115, sistema=rtbs, PUK=00000000, PUK2=0000000, proceso=preactivacion, GSM=584120108437, ERROR=OM01, PIN1=0000, ICCID=000000000, NOMARCHIVO=RegistrosElementos, ERROR_MSG=Mensaje de Error, ID=123456}}]
+[2009feb11 18:10:41,913][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:50][Iniciando proceso de compilacion de comando: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>${CODE}</code>
+      <message>${MESSAGE}</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:41,914][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:83][Componente CONSTANTE encontrado: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>]
+[2009feb11 18:10:41,914][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:63][Componente VARIABLE encontrado: CODE]
+[2009feb11 18:10:41,915][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:74][Componente CONSTANTE encontrado: </code>
+      <message>]
+[2009feb11 18:10:41,916][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:63][Componente VARIABLE encontrado: MESSAGE]
+[2009feb11 18:10:41,917][DEBUG][1234392041241][compileCmd NameSustitutionCmdAdapter.java:74][Componente CONSTANTE encontrado: </message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:41,917][DEBUG][1234392041241][processRequest RCController.java:65][antes del trace ID]
+[2009feb11 18:10:41,918][DEBUG][1234392041241][processRequest RCController.java:70][ve.com.digitel.premasivas.model.Request{ | header: {traceid=1234392041241} | context: {PIN=0000, IMSI=123456789123456, FECHA=20080115, sistema=rtbs, PUK=00000000, PUK2=0000000, proceso=preactivacion, GSM=584120108437, ERROR=OM01, PIN1=0000, ICCID=000000000, NOMARCHIVO=RegistrosElementos, ERROR_MSG=Mensaje de Error, ID=123456}}]
+[2009feb11 18:10:41,928][DEBUG][1234392041241][<init> RESDelegator.java:59][dataSource: jdbc.datasource.res]
+[2009feb11 18:10:41,929][DEBUG][1234392041241][<init> RESDelegator.java:60][Query: INSERT INTO CRTLPREMAS (ID, FECHA, NOMARCHIVO, GSM, IMSI, ICCID, PIN, PIN1, PUK, PUK2, ERROR, ERROR_MSG) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)]
+[2009feb11 18:10:41,930][DEBUG][1234392041241][<init> RESDelegator.java:61][argumento: ID;FECHA;NOMARCHIVO;GSM;IMSI;ICCID;PIN;PIN1;PUK;PUK2;ERROR;ERROR_MSG]
+[2009feb11 18:10:41,930][DEBUG][1234392041241][init RESDelegator.java:85][Metodo de inicializacion]
+[2009feb11 18:10:41,943][DEBUG][1234392041241][execute SolicitudQueueSubmiter.java:126][Request enviado a la cola de solicitudes]
+[2009feb11 18:10:41,949][DEBUG][1234392041241][assembly NameSustitutionCmdAdapter.java:201][Ensamblando lista de COMPONENTES para la construccion del COMANDO]
+[2009feb11 18:10:41,951][DEBUG][1234392041241][processRequest FCController.java:95][Response: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM00</code>
+      <message>En Proceso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:41,951][INFO ][1234392041241][doPost RESServlet.java:70][Response Recibido: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM00</code>
+      <message>En Proceso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:42,047][DEBUG][1234392041241][execute RESDelegator.java:140][Se obtuvo la conexion al DataSource. Accesando a la Base de Datos]
+[2009feb11 18:10:42,048][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 1 - Campo de la tabla: ID - Valor del campo: 123456]
+[2009feb11 18:10:42,048][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 2 - Campo de la tabla: FECHA - Valor del campo: 20080115]
+[2009feb11 18:10:42,049][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 3 - Campo de la tabla: NOMARCHIVO - Valor del campo: RegistrosElementos]
+[2009feb11 18:10:42,050][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 4 - Campo de la tabla: GSM - Valor del campo: 584120108437]
+[2009feb11 18:10:42,050][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 5 - Campo de la tabla: IMSI - Valor del campo: 123456789123456]
+[2009feb11 18:10:42,051][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 6 - Campo de la tabla: ICCID - Valor del campo: 000000000]
+[2009feb11 18:10:42,052][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 7 - Campo de la tabla: PIN - Valor del campo: 0000]
+[2009feb11 18:10:42,052][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 8 - Campo de la tabla: PIN1 - Valor del campo: 0000]
+[2009feb11 18:10:42,053][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 9 - Campo de la tabla: PUK - Valor del campo: 00000000]
+[2009feb11 18:10:42,054][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 10 - Campo de la tabla: PUK2 - Valor del campo: 0000000]
+[2009feb11 18:10:42,055][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 11 - Campo de la tabla: ERROR - Valor del campo: OM01]
+[2009feb11 18:10:42,055][DEBUG][1234392041241][execute RESDelegator.java:148][Indice de la tabla: 12 - Campo de la tabla: ERROR_MSG - Valor del campo: Mensaje de Error]
+[2009feb11 18:10:42,083][DEBUG][1234392041241][execute RESDelegator.java:156][Datos insertados en la tabla exitosamente]
+[2009feb11 18:10:42,084][DEBUG][1234392041241][execute RESDelegator.java:172][Finalizada conexion con la tabla de insercion de datos]
+[2009feb11 18:10:42,085][DEBUG][1234392041241][execute RESDelegator.java:178][Finalizada conexion con el DataSource]
+[2009feb11 18:10:42,086][DEBUG][1234392041241][assembly NameSustitutionCmdAdapter.java:201][Ensamblando lista de COMPONENTES para la construccion del COMANDO]
+[2009feb11 18:10:42,087][DEBUG][1234392041241][processRequest RCController.java:95][Response: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>Exitoso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:10:42,087][INFO ][1234392041241][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>Exitoso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:12:32,995][INFO ][1234392152995][doPost RESServlet.java:64][XML Recibido: <?xml version="1.0" encoding="UTF-8"?>
+<Request
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+	<traceId>123456</traceId>
+	<login>login</login>
+	<channel>channel</channel>
+	<SRE001Request>
+    	<proceso>preactivacion</proceso>
+    	<sistema>rtbs</sistema>
+    	<ID>123456</ID>
+    	<FECHA>2009-02-11</FECHA>
+    	<NOMARCHIVO>RegistrosElementos</NOMARCHIVO>
+    	<GSM>584120108437</GSM>
+    	<IMSI>123456789123456</IMSI>
+    	<ICCID>000000000</ICCID>
+    	<PIN>0000</PIN>
+    	<PIN1>0000</PIN1>
+    	<PUK>00000000</PUK>
+    	<PUK2>0000000</PUK2>
+    	<ERROR>OM01</ERROR> 
+    	<ERROR_MSG>Mensaje de Error</ERROR_MSG> 
+  	</SRE001Request>
+</Request>]
+[2009feb11 18:12:32,996][DEBUG][1234392152995][processRequest FCController.java:62][<?xml version="1.0" encoding="UTF-8"?>
+<Request
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+	<traceId>123456</traceId>
+	<login>login</login>
+	<channel>channel</channel>
+	<SRE001Request>
+    	<proceso>preactivacion</proceso>
+    	<sistema>rtbs</sistema>
+    	<ID>123456</ID>
+    	<FECHA>2009-02-11</FECHA>
+    	<NOMARCHIVO>RegistrosElementos</NOMARCHIVO>
+    	<GSM>584120108437</GSM>
+    	<IMSI>123456789123456</IMSI>
+    	<ICCID>000000000</ICCID>
+    	<PIN>0000</PIN>
+    	<PIN1>0000</PIN1>
+    	<PUK>00000000</PUK>
+    	<PUK2>0000000</PUK2>
+    	<ERROR>OM01</ERROR> 
+    	<ERROR_MSG>Mensaje de Error</ERROR_MSG> 
+  	</SRE001Request>
+</Request>]
+[2009feb11 18:12:33,007][DEBUG][1234392152995][buildRequest FCHelper.java:39][INICIO de parser XML de entrada]
+[2009feb11 18:12:33,021][DEBUG][1234392152995][execute SolicitudQueueSubmiter.java:120][Nuevo request: ve.com.digitel.premasivas.model.Request{ | header: {traceid=1234392152995} | context: {IMSI=123456789123456, PIN=0000, sistema=rtbs, FECHA=2009-02-11, PUK=00000000, PUK2=0000000, proceso=preactivacion, GSM=584120108437, PIN1=0000, ERROR=OM01, ICCID=000000000, NOMARCHIVO=RegistrosElementos, ERROR_MSG=Mensaje de Error, ID=123456}}]
+[2009feb11 18:12:33,024][INFO ][1234392152995][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=1234392152995} | context: {PIN=0000, IMSI=123456789123456, FECHA=2009-02-11, sistema=rtbs, PUK=00000000, PUK2=0000000, proceso=preactivacion, GSM=584120108437, ERROR=OM01, PIN1=0000, ICCID=000000000, NOMARCHIVO=RegistrosElementos, ERROR_MSG=Mensaje de Error, ID=123456}}]
+[2009feb11 18:12:33,025][DEBUG][1234392152995][processRequest RCController.java:65][antes del trace ID]
+[2009feb11 18:12:33,025][DEBUG][1234392152995][processRequest RCController.java:70][ve.com.digitel.premasivas.model.Request{ | header: {traceid=1234392152995} | context: {PIN=0000, IMSI=123456789123456, FECHA=2009-02-11, sistema=rtbs, PUK=00000000, PUK2=0000000, proceso=preactivacion, GSM=584120108437, ERROR=OM01, PIN1=0000, ICCID=000000000, NOMARCHIVO=RegistrosElementos, ERROR_MSG=Mensaje de Error, ID=123456}}]
+[2009feb11 18:12:33,027][DEBUG][1234392152995][execute RESDelegator.java:140][Se obtuvo la conexion al DataSource. Accesando a la Base de Datos]
+[2009feb11 18:12:33,028][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 1 - Campo de la tabla: ID - Valor del campo: 123456]
+[2009feb11 18:12:33,029][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 2 - Campo de la tabla: FECHA - Valor del campo: 2009-02-11]
+[2009feb11 18:12:33,029][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 3 - Campo de la tabla: NOMARCHIVO - Valor del campo: RegistrosElementos]
+[2009feb11 18:12:33,030][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 4 - Campo de la tabla: GSM - Valor del campo: 584120108437]
+[2009feb11 18:12:33,031][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 5 - Campo de la tabla: IMSI - Valor del campo: 123456789123456]
+[2009feb11 18:12:33,031][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 6 - Campo de la tabla: ICCID - Valor del campo: 000000000]
+[2009feb11 18:12:33,032][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 7 - Campo de la tabla: PIN - Valor del campo: 0000]
+[2009feb11 18:12:33,033][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 8 - Campo de la tabla: PIN1 - Valor del campo: 0000]
+[2009feb11 18:12:33,033][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 9 - Campo de la tabla: PUK - Valor del campo: 00000000]
+[2009feb11 18:12:33,034][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 10 - Campo de la tabla: PUK2 - Valor del campo: 0000000]
+[2009feb11 18:12:33,035][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 11 - Campo de la tabla: ERROR - Valor del campo: OM01]
+[2009feb11 18:12:33,036][DEBUG][1234392152995][execute RESDelegator.java:148][Indice de la tabla: 12 - Campo de la tabla: ERROR_MSG - Valor del campo: Mensaje de Error]
+[2009feb11 18:12:33,039][DEBUG][1234392152995][execute SolicitudQueueSubmiter.java:126][Request enviado a la cola de solicitudes]
+[2009feb11 18:12:33,041][DEBUG][1234392152995][assembly NameSustitutionCmdAdapter.java:201][Ensamblando lista de COMPONENTES para la construccion del COMANDO]
+[2009feb11 18:12:33,042][DEBUG][1234392152995][processRequest FCController.java:95][Response: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM00</code>
+      <message>En Proceso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:12:33,042][INFO ][1234392152995][doPost RESServlet.java:70][Response Recibido: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM00</code>
+      <message>En Proceso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:12:33,052][DEBUG][1234392152995][execute RESDelegator.java:156][Datos insertados en la tabla exitosamente]
+[2009feb11 18:12:33,053][DEBUG][1234392152995][execute RESDelegator.java:172][Finalizada conexion con la tabla de insercion de datos]
+[2009feb11 18:12:33,053][DEBUG][1234392152995][execute RESDelegator.java:178][Finalizada conexion con el DataSource]
+[2009feb11 18:12:33,054][DEBUG][1234392152995][assembly NameSustitutionCmdAdapter.java:201][Ensamblando lista de COMPONENTES para la construccion del COMANDO]
+[2009feb11 18:12:33,055][DEBUG][1234392152995][processRequest RCController.java:95][Response: <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>Exitoso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2009feb11 18:12:33,055][INFO ][1234392152995][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>Exitoso</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]

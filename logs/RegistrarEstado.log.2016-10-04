@@ -1,0 +1,296 @@
+[2016Oct04 09:26:50,515][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: RegistrarEstado - VERSION: 1.0]
+[2016Oct04 09:26:50,532][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicios de Integracion - Register Element Service - Inserciones de elementos en una BD]
+[2016Oct04 09:26:50,543][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=04125342996_1475589405908, Target=crear.suscriptor.rtbs} | context: {PIN=0000, IMSI=734024020500016, reportedFrom=CCWS, FECHA=2016-10-04 09:26:45, sistema=rtbs, profile=08, PUK=15045492, PUK2=60525523, proceso=preactivacion, GSM=04125342996, PIN1=1108, ERROR=100, ICCID=8958021306050000220F, NOMARCHIVO=DIG05028_1_OCCIDENTE_1, ERROR_MSG=Error en la creacion del suscriptor en RTBS, ID=04125342996_1475589405908}}]
+[2016Oct04 09:26:50,543][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=04125342996_1475589405908, Target=crear.suscriptor.rtbs} | context: {PIN=0000, IMSI=734024020500016, reportedFrom=CCWS, FECHA=2016-10-04 09:26:45, sistema=rtbs, profile=08, PUK=15045492, PUK2=60525523, proceso=preactivacion, GSM=04125342996, PIN1=1108, ERROR=100, ICCID=8958021306050000220F, NOMARCHIVO=DIG05028_1_OCCIDENTE_1, ERROR_MSG=Error en la creacion del suscriptor en RTBS, ID=04125342996_1475589405908}}]
+[2016Oct04 09:26:50,543][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=04125342996_1475589405908, OldTarget=crear.suscriptor.rtbs, Target=generar.archivo.salida} | context: {PIN=0000, IMSI=734024020500016, reportedFrom=CCWS, FECHA=2016-10-04 09:26:45, sistema=rtbs, profile=08, PUK=15045492, PUK2=60525523, proceso=preactivacion, GSM=04125342996, PIN1=1108, ERROR=100, ICCID=8958021306050000220F, NOMARCHIVO=DIG05028_1_OCCIDENTE_1, ERROR_MSG=Error en la creacion del suscriptor en RTBS, ID=04125342996_1475589405908}}]
+[2016Oct04 09:26:50,544][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=04125342996_1475589405908, Target=crear.suscriptor.rtbs} | context: {PIN=0000, IMSI=734024020500016, reportedFrom=CCWS, FECHA=2016-10-04 09:26:45, sistema=rtbs, profile=08, PUK=15045492, PUK2=60525523, proceso=preactivacion, GSM=04125342996, PIN1=1108, ERROR=100, ICCID=8958021306050000220F, NOMARCHIVO=DIG05028_1_OCCIDENTE_1, ERROR_MSG=Error en la creacion del suscriptor en RTBS, ID=04125342996_1475589405908}}]
+[2016Oct04 09:26:50,661][ERROR][04125342996_1475589405908][processRequest RCController.java:83][Codigo de Error: SRE001-EM03 Mensaje de Error: No se puede tomar solicitud de la cola]
+javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc [Root exception is javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc]; remaining name 'datasource/res'
+	at weblogic.rjvm.BasicOutboundRequest.sendReceive(BasicOutboundRequest.java:108)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:290)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:248)
+	at weblogic.jndi.internal.ServerNamingNode_815_WLStub.lookup(Unknown Source)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:375)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:363)
+	at javax.naming.InitialContext.lookup(InitialContext.java:347)
+	at ve.com.digitel.res.rc.RESDelegator.execute(RESDelegator.java:129)
+	at ve.com.digitel.res.rc.RCHelper.processRequest(RCHelper.java:77)
+	at ve.com.digitel.res.rc.RCController.processRequest(RCController.java:76)
+	at ve.com.digitel.res.ejb.RegisterElementMDBean.onMessage(RegisterElementMDBean.java:128)
+	at weblogic.ejb20.internal.MDListener.execute(MDListener.java:400)
+	at weblogic.ejb20.internal.MDListener.transactionalOnMessage(MDListener.java:333)
+	at weblogic.ejb20.internal.MDListener.onMessage(MDListener.java:298)
+	at weblogic.jms.client.JMSSession.onMessage(JMSSession.java:2686)
+	at weblogic.jms.client.JMSSession.execute(JMSSession.java:2598)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc
+	at weblogic.jndi.internal.BasicNamingNode.newNameNotFoundException(BasicNamingNode.java:924)
+	at weblogic.jndi.internal.BasicNamingNode.lookupHere(BasicNamingNode.java:225)
+	at weblogic.jndi.internal.ServerNamingNode.lookupHere(ServerNamingNode.java:154)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:188)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:196)
+	at weblogic.jndi.internal.RootNamingNode_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	... 2 more
+[2016Oct04 09:26:50,661][ERROR][04125342996_1475589405908][processRequest RCController.java:83][Codigo de Error: SRE001-EM03 Mensaje de Error: No se puede tomar solicitud de la cola]
+javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc [Root exception is javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc]; remaining name 'datasource/res'
+	at weblogic.rjvm.BasicOutboundRequest.sendReceive(BasicOutboundRequest.java:108)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:290)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:248)
+	at weblogic.jndi.internal.ServerNamingNode_815_WLStub.lookup(Unknown Source)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:375)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:363)
+	at javax.naming.InitialContext.lookup(InitialContext.java:347)
+	at ve.com.digitel.res.rc.RESDelegator.execute(RESDelegator.java:129)
+	at ve.com.digitel.res.rc.RCHelper.processRequest(RCHelper.java:77)
+	at ve.com.digitel.res.rc.RCController.processRequest(RCController.java:76)
+	at ve.com.digitel.res.ejb.RegisterElementMDBean.onMessage(RegisterElementMDBean.java:128)
+	at weblogic.ejb20.internal.MDListener.execute(MDListener.java:400)
+	at weblogic.ejb20.internal.MDListener.transactionalOnMessage(MDListener.java:333)
+	at weblogic.ejb20.internal.MDListener.onMessage(MDListener.java:298)
+	at weblogic.jms.client.JMSSession.onMessage(JMSSession.java:2686)
+	at weblogic.jms.client.JMSSession.execute(JMSSession.java:2598)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc
+	at weblogic.jndi.internal.BasicNamingNode.newNameNotFoundException(BasicNamingNode.java:924)
+	at weblogic.jndi.internal.BasicNamingNode.lookupHere(BasicNamingNode.java:225)
+	at weblogic.jndi.internal.ServerNamingNode.lookupHere(ServerNamingNode.java:154)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:188)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:196)
+	at weblogic.jndi.internal.RootNamingNode_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	... 2 more
+[2016Oct04 09:26:50,661][ERROR][04125342996_1475589405908][processRequest RCController.java:83][Codigo de Error: SRE001-EM03 Mensaje de Error: No se puede tomar solicitud de la cola]
+javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc [Root exception is javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc]; remaining name 'datasource/res'
+	at weblogic.rjvm.BasicOutboundRequest.sendReceive(BasicOutboundRequest.java:108)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:290)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:248)
+	at weblogic.jndi.internal.ServerNamingNode_815_WLStub.lookup(Unknown Source)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:375)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:363)
+	at javax.naming.InitialContext.lookup(InitialContext.java:347)
+	at ve.com.digitel.res.rc.RESDelegator.execute(RESDelegator.java:129)
+	at ve.com.digitel.res.rc.RCHelper.processRequest(RCHelper.java:77)
+	at ve.com.digitel.res.rc.RCController.processRequest(RCController.java:76)
+	at ve.com.digitel.res.ejb.RegisterElementMDBean.onMessage(RegisterElementMDBean.java:128)
+	at weblogic.ejb20.internal.MDListener.execute(MDListener.java:400)
+	at weblogic.ejb20.internal.MDListener.transactionalOnMessage(MDListener.java:333)
+	at weblogic.ejb20.internal.MDListener.onMessage(MDListener.java:298)
+	at weblogic.jms.client.JMSSession.onMessage(JMSSession.java:2686)
+	at weblogic.jms.client.JMSSession.execute(JMSSession.java:2598)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc
+	at weblogic.jndi.internal.BasicNamingNode.newNameNotFoundException(BasicNamingNode.java:924)
+	at weblogic.jndi.internal.BasicNamingNode.lookupHere(BasicNamingNode.java:225)
+	at weblogic.jndi.internal.ServerNamingNode.lookupHere(ServerNamingNode.java:154)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:188)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:196)
+	at weblogic.jndi.internal.RootNamingNode_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	... 2 more
+[2016Oct04 09:26:50,668][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>No se puede tomar solicitud de la cola</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2016Oct04 09:26:50,670][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>No se puede tomar solicitud de la cola</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2016Oct04 09:26:50,671][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>No se puede tomar solicitud de la cola</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2016Oct04 09:26:50,691][ERROR][04125342996_1475589405908][processRequest RCController.java:83][Codigo de Error: SRE001-EM03 Mensaje de Error: No se puede tomar solicitud de la cola]
+javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc [Root exception is javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc]; remaining name 'datasource/res'
+	at weblogic.rjvm.BasicOutboundRequest.sendReceive(BasicOutboundRequest.java:108)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:290)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:248)
+	at weblogic.jndi.internal.ServerNamingNode_815_WLStub.lookup(Unknown Source)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:375)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:363)
+	at javax.naming.InitialContext.lookup(InitialContext.java:347)
+	at ve.com.digitel.res.rc.RESDelegator.execute(RESDelegator.java:129)
+	at ve.com.digitel.res.rc.RCHelper.processRequest(RCHelper.java:77)
+	at ve.com.digitel.res.rc.RCController.processRequest(RCController.java:76)
+	at ve.com.digitel.res.ejb.RegisterElementMDBean.onMessage(RegisterElementMDBean.java:128)
+	at weblogic.ejb20.internal.MDListener.execute(MDListener.java:400)
+	at weblogic.ejb20.internal.MDListener.transactionalOnMessage(MDListener.java:333)
+	at weblogic.ejb20.internal.MDListener.onMessage(MDListener.java:298)
+	at weblogic.jms.client.JMSSession.onMessage(JMSSession.java:2686)
+	at weblogic.jms.client.JMSSession.execute(JMSSession.java:2598)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc
+	at weblogic.jndi.internal.BasicNamingNode.newNameNotFoundException(BasicNamingNode.java:924)
+	at weblogic.jndi.internal.BasicNamingNode.lookupHere(BasicNamingNode.java:225)
+	at weblogic.jndi.internal.ServerNamingNode.lookupHere(ServerNamingNode.java:154)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:188)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:196)
+	at weblogic.jndi.internal.RootNamingNode_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	... 2 more
+[2016Oct04 09:26:50,695][INFO ][04125342996_1475589405908][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>No se puede tomar solicitud de la cola</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2016Oct04 09:31:15,440][INFO ][04125342996_1475589673730][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=04125342996_1475589673730, OldTarget=crear.suscriptor.rtbs, Target=generar.archivo.salida} | context: {PIN=0000, IMSI=734024020500016, reportedFrom=CCWS, FECHA=2016-10-04 09:31:13, sistema=rtbs, profile=08, PUK=15045492, PUK2=60525523, proceso=preactivacion, GSM=04125342996, PIN1=1108, ERROR=500, ICCID=8958021306050000220F, NOMARCHIVO=DIG05028_1_OCCIDENTE_1, ERROR_MSG=Error ocurrido durante la creacion del suscriptor en RTBS, ID=04125342996_1475589673730}}]
+[2016Oct04 09:31:15,456][ERROR][04125342996_1475589673730][processRequest RCController.java:83][Codigo de Error: SRE001-EM03 Mensaje de Error: No se puede tomar solicitud de la cola]
+javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc [Root exception is javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc]; remaining name 'datasource/res'
+	at weblogic.rjvm.BasicOutboundRequest.sendReceive(BasicOutboundRequest.java:108)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:290)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:248)
+	at weblogic.jndi.internal.ServerNamingNode_815_WLStub.lookup(Unknown Source)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:375)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:363)
+	at javax.naming.InitialContext.lookup(InitialContext.java:347)
+	at ve.com.digitel.res.rc.RESDelegator.execute(RESDelegator.java:129)
+	at ve.com.digitel.res.rc.RCHelper.processRequest(RCHelper.java:77)
+	at ve.com.digitel.res.rc.RCController.processRequest(RCController.java:76)
+	at ve.com.digitel.res.ejb.RegisterElementMDBean.onMessage(RegisterElementMDBean.java:128)
+	at weblogic.ejb20.internal.MDListener.execute(MDListener.java:400)
+	at weblogic.ejb20.internal.MDListener.transactionalOnMessage(MDListener.java:333)
+	at weblogic.ejb20.internal.MDListener.onMessage(MDListener.java:298)
+	at weblogic.jms.client.JMSSession.onMessage(JMSSession.java:2686)
+	at weblogic.jms.client.JMSSession.execute(JMSSession.java:2598)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc
+	at weblogic.jndi.internal.BasicNamingNode.newNameNotFoundException(BasicNamingNode.java:924)
+	at weblogic.jndi.internal.BasicNamingNode.lookupHere(BasicNamingNode.java:225)
+	at weblogic.jndi.internal.ServerNamingNode.lookupHere(ServerNamingNode.java:154)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:188)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:196)
+	at weblogic.jndi.internal.RootNamingNode_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	... 2 more
+[2016Oct04 09:31:15,460][INFO ][04125342996_1475589673730][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>No se puede tomar solicitud de la cola</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
+[2016Oct04 09:45:36,314][INFO ][04125342996_1475590525220][onMessage RegisterElementMDBean.java:126][Mensaje recibido con exito en la cola de SOLICITUD ve.com.digitel.premasivas.model.Request{ | header: {traceid=04125342996_1475590525220, OldTarget=crear.suscriptor.rtbs, Target=aprovisionar.suscriptor.hlr} | context: {PIN=0000, IMSI=734024020500016, reportedFrom=CCWS, FECHA=2016-10-04 09:45:25, sistema=rtbs, profile=08, PUK=15045492, PUK2=60525523, proceso=preactivacion, GSM=04125342996, PIN1=1108, ERROR=0, ICCID=8958021306050000220F, NOMARCHIVO=DIG05028_1_OCCIDENTE_1, ERROR_MSG=Cliente creado con exito en RTBS, ID=04125342996_1475590525220}}]
+[2016Oct04 09:45:36,331][ERROR][04125342996_1475590525220][processRequest RCController.java:83][Codigo de Error: SRE001-EM03 Mensaje de Error: No se puede tomar solicitud de la cola]
+javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc [Root exception is javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc]; remaining name 'datasource/res'
+	at weblogic.rjvm.BasicOutboundRequest.sendReceive(BasicOutboundRequest.java:108)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:290)
+	at weblogic.rmi.cluster.ReplicaAwareRemoteRef.invoke(ReplicaAwareRemoteRef.java:248)
+	at weblogic.jndi.internal.ServerNamingNode_815_WLStub.lookup(Unknown Source)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:375)
+	at weblogic.jndi.internal.WLContextImpl.lookup(WLContextImpl.java:363)
+	at javax.naming.InitialContext.lookup(InitialContext.java:347)
+	at ve.com.digitel.res.rc.RESDelegator.execute(RESDelegator.java:129)
+	at ve.com.digitel.res.rc.RCHelper.processRequest(RCHelper.java:77)
+	at ve.com.digitel.res.rc.RCController.processRequest(RCController.java:76)
+	at ve.com.digitel.res.ejb.RegisterElementMDBean.onMessage(RegisterElementMDBean.java:128)
+	at weblogic.ejb20.internal.MDListener.execute(MDListener.java:400)
+	at weblogic.ejb20.internal.MDListener.transactionalOnMessage(MDListener.java:333)
+	at weblogic.ejb20.internal.MDListener.onMessage(MDListener.java:298)
+	at weblogic.jms.client.JMSSession.onMessage(JMSSession.java:2686)
+	at weblogic.jms.client.JMSSession.execute(JMSSession.java:2598)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: javax.naming.NameNotFoundException: While trying to lookup 'jdbc.datasource.res' didn't find subcontext 'datasource' Resolved jdbc
+	at weblogic.jndi.internal.BasicNamingNode.newNameNotFoundException(BasicNamingNode.java:924)
+	at weblogic.jndi.internal.BasicNamingNode.lookupHere(BasicNamingNode.java:225)
+	at weblogic.jndi.internal.ServerNamingNode.lookupHere(ServerNamingNode.java:154)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:188)
+	at weblogic.jndi.internal.BasicNamingNode.lookup(BasicNamingNode.java:196)
+	at weblogic.jndi.internal.RootNamingNode_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	... 2 more
+[2016Oct04 09:45:36,335][INFO ][04125342996_1475590525220][onMessage RegisterElementMDBean.java:130][Solicitud procesada <?xml version="1.0" encoding="UTF-8"?>
+<Response
+  xmlns="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digitel.com.ve/eai/BusinessIntegration/SRE/SRE001.xsd">
+  <traceId></traceId>
+  <OperationMessages>
+    <OperationMessage>
+      <code>SRE001-EM01</code>
+      <message>No se puede tomar solicitud de la cola</message>
+    </OperationMessage>
+  </OperationMessages>
+</Response>]
